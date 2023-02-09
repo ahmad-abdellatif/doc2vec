@@ -1,6 +1,44 @@
  language: python
- python:
-    - "3.5"
+ matrix:
+  include:
+  - dist: xenial
+    os: linux
+    language: python
+    python: "3.5"
+  - dist: xenial
+    os: linux
+    language: python
+    python: "3.6"
+  - dist: xenial
+    os: linux
+    language: python
+    python: "3.8"
+  
+  - dist: trusty
+    os: linux
+    language: python
+    python: "3.5"
+  - dist: trusty
+    os: linux
+    language: python
+    python: "3.6"
+  - dist: trusty
+    os: linux
+    language: python
+    python: "3.8"
+    
+  - dist: bionic
+    os: linux
+    language: python
+    python: "3.5"
+  - dist: bionic
+    os: linux
+    language: python
+    python: "3.6"
+  - dist: bionic
+    os: linux
+    language: python
+    python: "3.8"
  install:
   - sudo rm -f /etc/boto.cfg
   - pip install -r requirements.txt
